@@ -1,4 +1,4 @@
-!/bin/sh
+#!/bin/bash
 
 svn up ~/public_html/se361/lectures
 chmod -R a+rx ~/public_html/se361/lectures
