@@ -97,3 +97,6 @@ fi
 #if [ -f /etc/bash_completion ]; then
 #    . /etc/bash_completion
 #fi
+
+#Set the default editor to vim instead of nano
+EDITOR=vim; export EDITOR
