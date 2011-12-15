@@ -2,7 +2,8 @@
 
 cd ~
 
-DIR=~/scripts-settings/linus.se.rit.edu
+SCRIPTS=~/scripts-settings
+DIR="$SCRIPTS/linus"
 
 echo "Copying commonly-used scripts to $DIR"
 
@@ -16,4 +17,11 @@ cp .gitconfig $DIR
 cp .profile $DIR
 cp .vimrc $DIR
 
+echo "Committing the changes to Git..."
+
+cd $SCRIPTS
+
+git add .
+git commit
+git push origin master
 
