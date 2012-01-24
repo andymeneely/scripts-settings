@@ -1,0 +1,5 @@
+
+alias ls="ls | sed 's/$/ in bed! /'"
+alias cd='echo "Hello, World!"'
+
+#Idea: use a cronjob to make these changes to give yourself an alibi
