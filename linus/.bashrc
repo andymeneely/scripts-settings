@@ -100,3 +100,5 @@ fi
 
 #Set the default editor to vim instead of nano
 EDITOR=vim; export EDITOR
+
+source ~/.git-completion.bash
