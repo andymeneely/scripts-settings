@@ -7,14 +7,14 @@ DIR="$SCRIPTS/se-dept"
 
 echo "Copying commonly-used scripts to $DIR"
 
-cp -r bin/ $DIR
-cp -r --exclude=bundle/vim-ruby .vim/ $DIR
-cp .bash_aliases $DIR
-cp .bash_profile $DIR
-cp .bashrc $DIR
-cp .gitconfig $DIR
-cp .profile $DIR
-cp .vimrc $DIR
+rsync -rv --exclude=.nfs* bin/ $DIR/bin
+rsync -rv --exclude=bundle/vim-ruby .vim/ $DIR/.vim/
+rsync -v .bash_aliases $DIR
+rsync -v .bash_profile $DIR
+rsync -v .bashrc $DIR
+rsync -v .gitconfig $DIR
+rsync -v .profile $DIR
+rsync -v .vimrc $DIR
 
 echo "Committing the changes to Git..."
 
