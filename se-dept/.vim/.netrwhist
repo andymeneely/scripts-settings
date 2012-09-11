@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/faculty/andy/sandbox/thoughtshare/db/migrate'
+let g:netrw_dirhist_2='/home/faculty/andy/se350-grading/practicum4/Newman, Eric - finalpracticum.zip'
+let g:netrw_dirhist_3='/home/faculty/andy/se350-grading/practicum4/Sansone, Stefano - finalpracticum'
+let g:netrw_dirhist_4='/home/faculty/andy/scripts-settings'
