@@ -88,6 +88,12 @@ if [ -x /usr/bin/dircolors ]; then
     #alias egrep='egrep --color=auto'
 fi
 
+# enable color support for OpenBSD 
+UNAME=`uname`
+if [ "$UNAME" == "OpenBSD" ]; then
+    echo "OPENBSD COLORS!! WHEEE!!"
+fi
+
 # some more ls aliases
 #alias ll='ls -lah'
 #alias la='ls -A'
