@@ -97,10 +97,10 @@ if [ "$UNAME" == "OpenBSD" ]; then
     alias ls='colorls -G'
 fi
 
-# some more ls aliases
-#alias ll='ls -lah'
-#alias la='ls -A'
-#alias l='ls -CF'
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -110,6 +110,7 @@ fi
 #fi
 
 #Set the default editor to vim instead of nano
-EDITOR=vim; export EDITOR
+export EDITOR=vim; 
 
-source ~/.git-completion.bash
+# completion for git 
+source ~/bin/.git-completion.bash
