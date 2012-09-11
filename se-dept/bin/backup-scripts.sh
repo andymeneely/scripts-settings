@@ -8,7 +8,7 @@ DIR="$SCRIPTS/se-dept"
 echo "Copying commonly-used scripts to $DIR"
 
 cp -r bin/ $DIR
-cp -r .vim/ $DIR
+cp -r --exclude=bundle/vim-ruby .vim/ $DIR
 cp .bash_aliases $DIR
 cp .bash_profile $DIR
 cp .bashrc $DIR
