@@ -117,9 +117,9 @@ export EDITOR=vim;
 source ~/bin/.git-completion.bash
 
 # Ruby on Rails and Gem stuff
-export hpath="$home"
-export gem_home="$hpath/ruby/gems"
-export gem_path="$gem_home:/usr/lib64/ruby/gems/1.8"
-export gem_cache="$gem_home/cache"
-export path="$path:$hpath/ruby/gems/bin"
-export path="$path:$hpath/ruby/gems"
+export HPATH="$HOME"
+export GEM_HOME="$HPATH/ruby/gems"
+export GEM_PATH="$GEM_HOME:/usr/lib64/ruby/gems/1.8"
+export GEM_CACHE="$GEM_HOME/cache"
+export PATH="$PATH:$HPATH/ruby/gems/bin"
+export PATH="$PATH:$HPATH/ruby/gems"
