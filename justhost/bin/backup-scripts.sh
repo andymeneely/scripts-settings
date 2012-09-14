@@ -19,7 +19,7 @@ esac
 echo "Copying commonly-used scripts to $DIR"
 if [ "$WHERE" == "se" ]; then
 	rsync -rv --exclude=.nfs* bin/ $DIR/bin
-	rsync -rv --exclude=bundle/vim-rails .vim/ $DIR/.vim/
+	rsync -rv --exclude=bundle/vim-rails --exclude=bundle/vim-ruby .vim/ $DIR/.vim/
 	rsync -v .bash_aliases $DIR
 	rsync -v .bash_profile $DIR
 	rsync -v .bashrc $DIR

@@ -20,11 +20,4 @@ filetype plugin on  	" Enable filetype-specific plugins
 
 colorscheme desert
 
-" Make it easy to edit this file 
-" Mnemonic for the key sequence is 'e'dit 'v'imrc
-nmap <silent> ,ev :e $MYVIMRC<cr>
-
-" Source this file as well 
-" Mnemonic for the key sequence is 's'ource 'v'imrc)
-nmap <silent> ,sv :so $MYVIMRC<cr>
-
+call pathogen#infect() 	"Automatically load plugins
