@@ -14,6 +14,7 @@ set noerrorbells	" No sound on errors
 set novisualbell	" No sound via the visual bell
 set history=500		" Remember tons of commands (default is 20)
 set showmode		" Show the mode you are currently in
+set mouse=a		" Detect mouse input
 filetype on         	" Enable filetype detection
 filetype indent on  	" Enable filetype-specific indenting
 filetype plugin on  	" Enable filetype-specific plugins
