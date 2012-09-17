@@ -55,10 +55,14 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
+    unset GIT_PS1_SHOWDIRTYSTATE
+    unset GIT_PS1_SHOWSTASHSTATE
+    unset GIT_PS1_SHOWUNTRACKEDFILES
+    unset GIT_PS1_SHOWUPSTREAM
     GIT_PS1_SHOWDIRTYSTATE=yes
     GIT_PS1_SHOWSTASHSTATE=yes
     GIT_PS1_SHOWUNTRACKEDFILES=yes
-    GIT_PS1_SHOWUPSTREAM=yes
+    #GIT_PS1_SHOWUPSTREAM=auto
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
 fi
 unset color_prompt force_color_prompt
