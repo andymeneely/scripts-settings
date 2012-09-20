@@ -23,7 +23,7 @@ export HISTSIZE
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
@@ -122,3 +122,9 @@ export EDITOR=vim;
 
 # completion for git 
 source ~/bin/.git-completion.bash
+
+# Ruby gems setup
+export GEM_HOME="$HOME/.gems"
+export GEM_PATH="$HOME/.gems/:/usr/lib/ruby/gems/1.8/"
+export PATH="$PATH:$HOME/.gems/bin"
+export RUBYOPT="rubygems"
