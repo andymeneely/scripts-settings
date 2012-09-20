@@ -6,4 +6,4 @@ alias l='ls -CF'
 alias duh='du -h --max-depth=1'
 
 #Visual-less
-alias vless='/usr/share/vim/vim72/macros/less.sh'
+alias vless='/usr/share/vim/vim73/macros/less.sh'
