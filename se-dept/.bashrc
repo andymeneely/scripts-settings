@@ -113,7 +113,7 @@ fi
 export EDITOR=vim; 
 
 # completion and PS1 for git
-if [-f ~/bin/.git-completion.bash] ; then
+if [ -f ~/bin/.git-completion.bash ] ; then
     source ~/bin/.git-completion.bash
     unset GIT_PS1_SHOWDIRTYSTATE
     unset GIT_PS1_SHOWSTASHSTATE
