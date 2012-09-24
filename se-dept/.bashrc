@@ -54,15 +54,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    unset GIT_PS1_SHOWDIRTYSTATE
-    unset GIT_PS1_SHOWSTASHSTATE
-    unset GIT_PS1_SHOWUNTRACKEDFILES
-    unset GIT_PS1_SHOWUPSTREAM
-    GIT_PS1_SHOWDIRTYSTATE=yes
-    GIT_PS1_SHOWSTASHSTATE=yes
-    GIT_PS1_SHOWUNTRACKEDFILES=yes
-    #GIT_PS1_SHOWUPSTREAM=auto
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -120,8 +112,19 @@ fi
 #Set the default editor to vim instead of nano
 export EDITOR=vim; 
 
-# completion for git 
-source ~/bin/.git-completion.bash
+# completion and PS1 for git
+if [-f ~/bin/.git-completion.bash] ; then
+    source ~/bin/.git-completion.bash
+    unset GIT_PS1_SHOWDIRTYSTATE
+    unset GIT_PS1_SHOWSTASHSTATE
+    unset GIT_PS1_SHOWUNTRACKEDFILES
+    unset GIT_PS1_SHOWUPSTREAM
+    GIT_PS1_SHOWDIRTYSTATE=yes
+    GIT_PS1_SHOWSTASHSTATE=yes
+    GIT_PS1_SHOWUNTRACKEDFILES=yes
+    #GIT_PS1_SHOWUPSTREAM=auto
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
+fi
 
 # Ruby gems setup
 export GEM_HOME="$HOME/.gems"
