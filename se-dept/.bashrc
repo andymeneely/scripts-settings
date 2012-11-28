@@ -122,7 +122,7 @@ if [ -f ~/bin/.git-completion.bash ] ; then
     GIT_PS1_SHOWDIRTYSTATE=yes
     GIT_PS1_SHOWSTASHSTATE=yes
     GIT_PS1_SHOWUNTRACKEDFILES=yes
-    #GIT_PS1_SHOWUPSTREAM=auto
+    #GIT_PS1_SHOWUPSTREAM=git
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
 fi
 
