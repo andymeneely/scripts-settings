@@ -1,5 +1,8 @@
 [user]
 	name = Andy Meneely
-	email = andy.meneely@gmail.com
+	email = andy@se.rit.edu
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+     	acp = !git add -A . && git commit && git push
+     	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[color]
+	ui = true
