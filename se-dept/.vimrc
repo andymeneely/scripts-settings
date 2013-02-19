@@ -1,7 +1,6 @@
 " Andy's Vim config
 
 set number 		" show line numbers
-syntax on  		" syntax highlighing
 set nowrap 		" don't wrap lines
 set ruler 		" show the cursor position all the time
 set nocompatible 	" use vim defaults, not vi defaults
@@ -16,6 +15,7 @@ set novisualbell	" No sound via the visual bell
 set history=500		" Remember tons of commands (default is 20)
 set showmode		" Show the mode you are currently in
 set mouse=a		" Detect mouse input
+syntax on  		" syntax highlighing
 filetype on         	" Enable filetype detection
 filetype indent on  	" Enable filetype-specific indenting
 filetype plugin on  	" Enable filetype-specific plugins
