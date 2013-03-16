@@ -2,5 +2,9 @@
 	email = andy.meneely@gmail.com
 	name = Andy Meneely
 [alias]
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-
+        acp = !git add -A . && git commit && git push
+	done = !git checkout master && git merge dev && git push --all && git checkout dev
+     	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+        st = status
+[color]
+	ui = true
