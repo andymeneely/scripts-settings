@@ -21,3 +21,5 @@ filetype indent on  	" Enable filetype-specific indenting
 filetype plugin on  	" Enable filetype-specific plugins
 
 colorscheme desert
+
+map <F7> :tabn<CR> 

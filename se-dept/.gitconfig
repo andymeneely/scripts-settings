@@ -6,6 +6,7 @@
 	done = !git checkout master && git merge dev && git push --all && git checkout dev
      	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
         lgsearch = "!f() {git log -w -b --ignore-space-at-eol --ignore-space-change --ignore-all-space --name-status --pretty=short -S'$1'}; f"
-        st = status
+     	st = status
+	co = checkout
 [color]
 	ui = true
