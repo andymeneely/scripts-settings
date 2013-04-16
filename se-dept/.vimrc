@@ -15,6 +15,9 @@ set novisualbell	" No sound via the visual bell
 set history=500		" Remember tons of commands (default is 20)
 set showmode		" Show the mode you are currently in
 set mouse=a		" Detect mouse input
+set exrc            	" enable per-directory .vimrc files
+set secure          	" disable unsafe commands in local .vimrc files
+set wrap		" View long lines as wrapped
 syntax on  		" syntax highlighing
 filetype on         	" Enable filetype detection
 filetype indent on  	" Enable filetype-specific indenting
