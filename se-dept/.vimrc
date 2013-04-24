@@ -25,4 +25,7 @@ filetype plugin on  	" Enable filetype-specific plugins
 
 colorscheme desert
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
+match OverLength /\%81v.\+/
+
 map <F7> :tabn<CR> 

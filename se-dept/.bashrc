@@ -112,6 +112,10 @@ fi
 #Set the default editor to vim instead of nano
 export EDITOR=vim; 
 
+# Turn off Ctrl+S (XOFF) trap
+stty ixany
+stty ixoff -ixon
+
 # completion and PS1 for git
 if [ -f ~/bin/.git-completion.bash ] ; then
     source ~/bin/.git-completion.bash
