@@ -7,6 +7,7 @@
      	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
         lgsearch = "!f() {git log -w -b --ignore-space-at-eol --ignore-space-change --ignore-all-space --name-status --pretty=short -S'$1'}; f"
      	st = status
-	co = checkout
+     	co = checkout
+	ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
 [color]
 	ui = true
