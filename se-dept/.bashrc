@@ -133,5 +133,5 @@ fi
 # Ruby gems setup
 export GEM_HOME="$HOME/.gems"
 export GEM_PATH="$HOME/.gems/:/usr/lib/ruby/gems/1.8/"
-export PATH="$PATH:$HOME/.gems/bin"
+export PATH="$PATH:$HOME/.gems/bin:$HOME/depot_tools"
 export RUBYOPT="rubygems"
