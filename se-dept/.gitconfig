@@ -11,3 +11,7 @@
 	ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
 [color]
 	ui = true
+[core]
+	deltaBaseCacheLimit = 1G
+[github]
+	user = apmeneel
