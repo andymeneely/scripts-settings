@@ -4,7 +4,7 @@ set number 		" show line numbers
 set nowrap 		" don't wrap lines
 set ruler 		" show the cursor position all the time
 set nocompatible 	" use vim defaults, not vi defaults
-set shiftwidth=5	" number of spaces to (auto)indent
+set shiftwidth=4	" number of spaces to (auto)indent
 set cindent		" automatically indent inner blocks of code in C
 set ignorecase 		" Ignore case when searching
 set autoindent		" Start new lines on the same indent as previous
@@ -25,7 +25,7 @@ filetype plugin on  	" Enable filetype-specific plugins
 
 colorscheme desert
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
+"match OverLength /\%81v.\+/
 
 map <F7> :tabn<CR> 
