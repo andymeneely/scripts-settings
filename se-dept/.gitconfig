@@ -5,7 +5,7 @@
         acp = !git add -A . && git commit && git push
 	done = !git checkout master && git merge dev && git push --all && git checkout dev
      	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-     	st = status
+     	st = status -sb
      	co = checkout
 	ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
 [color]
