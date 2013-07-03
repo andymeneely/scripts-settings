@@ -7,3 +7,6 @@ alias duh='du -h --max-depth=1'
 
 #Visual-less
 alias vless='/usr/share/vim/vim73/macros/less.sh'
+
+#Good for showing tab-delimited tables
+alias vtab="column -t -s $'\t'"
