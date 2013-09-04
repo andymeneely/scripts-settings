@@ -135,3 +135,8 @@ export GEM_HOME="$HOME/.gems"
 export GEM_PATH="$HOME/.gems/:/usr/lib/ruby/gems/1.8/"
 export PATH="$PATH:$HOME/.gems/bin:$HOME/depot_tools"
 export RUBYOPT="rubygems"
+
+# Faculty bin scripts are on my path too
+if [ -d "/usr/fac/bin" ] ; then
+    export PATH="${PATH}:/usr/fac/bin"
+fi
