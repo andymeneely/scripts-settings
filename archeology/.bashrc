@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
-      *) return;;
+*) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -65,12 +65,26 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+    xterm*|rxvt*)
+	PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+	;;
+    *)
+	;;
 esac
+
+# completion and PS1 for git
+if [ -f ~/bin/.git-completion.bash ] ; then
+    source ~/bin/.git-completion.bash
+    unset GIT_PS1_SHOWDIRTYSTATE
+    unset GIT_PS1_SHOWSTASHSTATE
+    unset GIT_PS1_SHOWUNTRACKEDFILES
+    unset GIT_PS1_SHOWUPSTREAM
+    GIT_PS1_SHOWDIRTYSTATE=yes
+    GIT_PS1_SHOWSTASHSTATE=yes
+    GIT_PS1_SHOWUNTRACKEDFILES=yes
+    #GIT_PS1_SHOWUPSTREAM=git
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
+fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -106,12 +120,24 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+    fi
 fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+#Set the default editor to vim instead of nano
+export EDITOR=vim;
+
+# Turn off Ctrl+S (XOFF) trap
+stty ixany
+stty ixoff -ixon
 
 # Ruby gems setup
 export GEM_HOME="$HOME/.gems"
