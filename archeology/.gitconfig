@@ -14,3 +14,5 @@
 	deltaBaseCacheLimit = 1G
 [github]
 	user = apmeneel
+[push]
+	default = matching
