@@ -28,4 +28,7 @@ colorscheme desert
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
 "match OverLength /\%81v.\+/
 
-map <F7> :tabn<CR> 
+" Map f7 to next tab
+map <F7> :tabn<CR>	
+
+
