@@ -1,7 +1,6 @@
 " Andy's Vim config
 
 set number 		" show line numbers
-set nowrap 		" don't wrap lines
 set ruler 		" show the cursor position all the time
 set nocompatible 	" use vim defaults, not vi defaults
 set shiftwidth=4	" number of spaces to (auto)indent
@@ -31,4 +30,9 @@ colorscheme desert
 " Map f7 to next tab
 map <F7> :tabn<CR>	
 
+" Are we on the projector-friendly settings?
+if $LC_PROJECTOR == "Yes"
+    colorscheme darkblue
+    set nowrap
+endif
 

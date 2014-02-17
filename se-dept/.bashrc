@@ -128,6 +128,12 @@ if [ -f ~/bin/.git-completion.bash ] ; then
     GIT_PS1_SHOWUNTRACKEDFILES=yes
     #GIT_PS1_SHOWUPSTREAM=git
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
+
+    #Projector-friendly settings
+    if [ "$LC_PROJECTOR" == "YES" ]; then
+	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W$(__git_ps1 " (%s)")\$ '
+    fi
+
 fi
 
 # Ruby gems setup
