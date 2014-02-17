@@ -34,5 +34,7 @@ map <F7> :tabn<CR>
 if $LC_PROJECTOR == "Yes"
     colorscheme darkblue
     set nowrap
+    set shiftwidth=2
+    set tabstop=2
 endif
 
