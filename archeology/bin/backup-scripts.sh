@@ -36,6 +36,7 @@ if [ "$WHERE" == "se" ]; then
 	rsync -v .gitconfig $DIR
 	rsync -v .profile $DIR
 	rsync -v .vimrc $DIR
+	rsync -v .irbrc $DIR
 fi
 
 echo "Committing the changes to Git..."

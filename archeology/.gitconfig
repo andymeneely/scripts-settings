@@ -16,3 +16,7 @@
 	user = apmeneel
 [push]
 	default = matching
+[http]
+	postBuffer = 524288000
+[ghi]
+	token = 4592072848a629a1635984dc8917407477af5698

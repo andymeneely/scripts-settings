@@ -17,7 +17,6 @@ set showmode		" Show the mode you are currently in
 set mouse=a		" Detect mouse input
 set exrc            	" enable per-directory .vimrc files
 set secure          	" disable unsafe commands in local .vimrc files
-set wrap		" View long lines as wrapped
 syntax on  		" syntax highlighing
 filetype on         	" Enable filetype detection
 filetype indent on  	" Enable filetype-specific indenting
@@ -25,7 +24,13 @@ filetype plugin on  	" Enable filetype-specific plugins
 
 colorscheme desert
 
+"Highlight json as JavaScript
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
 "match OverLength /\%81v.\+/
 
 map <F7> :tabn<CR> 
+
+" Matchit for matching do/end in Ruby
+runtime macros/matchit.vim

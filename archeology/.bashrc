@@ -141,6 +141,10 @@ stty ixoff -ixon
 
 # Ruby gems setup
 export GEM_HOME="$HOME/.gems"
-export GEM_PATH="$HOME/.gems/:/usr/lib/ruby/gems/1.8/"
+#export GEM_HOME="$HOME/.gems:/var/lib/gems/1.9.1/gems"
+export GEM_PATH="$HOME/.gems/:/var/lib/gems/1.9.1/gems"
 export PATH="$PATH:$HOME/.gems/bin"
 export RUBYOPT="rubygems"
+
+# Stop checking my email
+unset MAILCHECK
