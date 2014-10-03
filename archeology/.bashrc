@@ -150,4 +150,4 @@ export RUBYOPT="rubygems"
 unset MAILCHECK
 
 # Set up depot_tools
-export PATH="$PATH:$HOME/depot_tools"
+export PATH="$HOME/depot_tools:$PATH"
