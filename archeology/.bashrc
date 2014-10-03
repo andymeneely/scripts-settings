@@ -148,3 +148,6 @@ export RUBYOPT="rubygems"
 
 # Stop checking my email
 unset MAILCHECK
+
+# Set up depot_tools
+export PATH="$PATH:$HOME/depot_tools"
