@@ -15,7 +15,7 @@
 [github]
 	user = apmeneel
 [push]
-	default = matching
+	default = simple
 [http]
 	postBuffer = 524288000
 [ghi]
