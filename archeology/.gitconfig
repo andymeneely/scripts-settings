@@ -11,12 +11,11 @@
 [color]
 	ui = true
 [core]
-	deltaBaseCacheLimit = 1G
+        deltaBaseCacheLimit = 1G
+        autocrlf = false
 [github]
 	user = apmeneel
 [push]
 	default = simple
 [http]
 	postBuffer = 524288000
-[ghi]
-	token = 4592072848a629a1635984dc8917407477af5698

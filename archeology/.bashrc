@@ -151,3 +151,13 @@ unset MAILCHECK
 
 # Set up depot_tools
 export PATH="$HOME/depot_tools:$PATH"
+
+# R users directories
+export R_LIBS="/home/axmvse/R_libs:$R_LIBS"
+
+#Cmake
+export PATH="$PATH:$HOME/cmake-3.1.3-Linux-x86_64/bin"
+
+#pkg-config
+export PATH="$PATH:$HOME/pkg-config-0.28"
+export PKG_CONFIG_PATH=/home/axmvse/pkg-config-0.28
