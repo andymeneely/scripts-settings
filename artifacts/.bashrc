@@ -73,17 +73,17 @@ case "$TERM" in
 esac
 
 # completion and PS1 for git
-if [ -f ~/bin/.git-completion.bash ] ; then
-    source ~/bin/.git-completion.bash
-    unset GIT_PS1_SHOWDIRTYSTATE
-    unset GIT_PS1_SHOWSTASHSTATE
-    unset GIT_PS1_SHOWUNTRACKEDFILES
-    unset GIT_PS1_SHOWUPSTREAM
-    GIT_PS1_SHOWDIRTYSTATE=yes
-    GIT_PS1_SHOWSTASHSTATE=yes
-    GIT_PS1_SHOWUNTRACKEDFILES=yes
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
-fi
+#if [ -f ~/bin/.git-completion.bash ] ; then
+    #source ~/bin/.git-completion.bash
+    #unset GIT_PS1_SHOWDIRTYSTATE
+    #unset GIT_PS1_SHOWSTASHSTATE
+    #unset GIT_PS1_SHOWUNTRACKEDFILES
+    #unset GIT_PS1_SHOWUPSTREAM
+    #GIT_PS1_SHOWDIRTYSTATE=yes
+    #GIT_PS1_SHOWSTASHSTATE=yes
+    #GIT_PS1_SHOWUNTRACKEDFILES=yes
+    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
+#fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
