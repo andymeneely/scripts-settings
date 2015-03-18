@@ -149,3 +149,7 @@ unset MAILCHECK
 
 # Set up depot_tools
 #export PATH="$HOME/depot_tools:$PATH"
+
+# A better pager for psql
+export PAGER=less
+export LESS="-iMSx4 -RS"
