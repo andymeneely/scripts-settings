@@ -33,7 +33,7 @@ map <F7> :tabn<CR>
 " Are we on the projector-friendly settings?
 if $LC_PROJECTOR == "Yes"
     set t_Co=256
-    colorscheme github
+    colorscheme morning
     set nowrap
     set shiftwidth=2
     set tabstop=2

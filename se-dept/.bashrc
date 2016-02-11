@@ -146,3 +146,6 @@ export RUBYOPT="rubygems"
 if [ -d "/usr/fac/bin" ] ; then
     export PATH="${PATH}:/usr/fac/bin"
 fi
+
+# Group only, please!
+umask 007
